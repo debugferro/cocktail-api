@@ -21,6 +21,8 @@ gem 'puma', '~> 5.0'
 
 # Countries Gem for getting information about them
 gem 'countries'
+# Cloudinary Gem for image upload
+gem 'cloudinary', '~> 1.16.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false

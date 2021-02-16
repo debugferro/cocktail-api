@@ -20,5 +20,6 @@ RSpec.describe Cocktail, type: :model do
     it { should have_many(:doses).dependent(:destroy) }
     it { should have_many(:ingredients).through(:doses) }
     it { should have_many(:reviews).dependent(:destroy) }
+    it { should have_one_attached(:photo) }
   end
 end
