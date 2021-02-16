@@ -4,4 +4,6 @@ class Ingredient < ApplicationRecord
 
   validates_associated :doses
   validates_associated :cocktails
+
+  validates :name, presence: true, length: { in: 3..30 }
 end
