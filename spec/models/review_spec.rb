@@ -9,11 +9,6 @@ RSpec.describe Review, type: :model do
     expect(review.username).to include(/Anonymous/)
   end
 
-  it 'is expected to be invalid when cocktail is not an instance of Cocktail' do
-    review.cocktail = ''
-    expect(cocktail).to_not be_valid
-  end
-
   describe 'Validations' do
     it { should have_one(:cocktail) }
     it { should validate_presence_of(:content) }

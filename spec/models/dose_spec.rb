@@ -9,16 +9,6 @@ RSpec.describe Dose, type: :model do
     expect(dose).to be_valid
   end
 
-  it 'is expected to be invalid if cocktail is not an instance of Cocktail' do
-    dose.cocktail = ''
-    expect(dose).to_not be_valid
-  end
-
-  it 'is expected to be invalid if ingredient is not an instance of Ingredient' do
-    dose.ingredient = ''
-    expect(dose).to_not be_valid
-  end
-
   describe 'Validations' do
     it { should validate_presence_of(:description) }
     it { should validate_length_of(:description).is_at_least(3).is_at_most(10) }
